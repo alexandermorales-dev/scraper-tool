@@ -1,5 +1,5 @@
 class Link
-  attr_reader :addr, :listings, :titles, :prices, :average
+  attr_reader :addr, :listings, :titles, :prices, :average, :arr
   def initialize(url)
     require 'nokogiri'
     require 'open-uri'
@@ -27,9 +27,12 @@ class Link
     @titles
     @prices
     i = 0
+    @arr = []
     while i < @titles.length
-      puts "Property name: #{@titles[i]} \n Price: #{@prices[i]}\n\n"
+      x = "Property name: #{@titles[i]} \n Price: #{@prices[i]}\n\n"
       i += 1
+      @arr.push(x)
+      @arr
     end
   end
 end
