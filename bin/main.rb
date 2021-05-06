@@ -26,11 +26,12 @@ html.titles("#{titles}")
 html.prices("#{prices}")
 
 html.all
+# str = "Property name: #{@titles[i]} \n Price: #{@prices[i]}"
 
 
 # https://www.encuentra24.com/panama-es/searchresult/bienes-raices-venta-de-propiedades?regionslug=prov-panama&q=f_price.-false
 
-# articles container = 'container'
+# articles container = 'article'
 
 # titles class = 'ann-box-title'
 
