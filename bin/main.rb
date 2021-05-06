@@ -26,12 +26,5 @@ html.titles(titles.to_s)
 html.prices(prices.to_s)
 
 html.all
-# str = "Property name: #{@titles[i]} \n Price: #{@prices[i]}"
+puts html.arr
 
-# https://www.encuentra24.com/panama-es/searchresult/bienes-raices-venta-de-propiedades?regionslug=prov-panama&q=f_price.-false
-
-# articles container = 'article'
-
-# titles class = 'ann-box-title'
-
-# prcices class = 'ann-price-2nd'
