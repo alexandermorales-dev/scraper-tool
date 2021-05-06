@@ -28,7 +28,7 @@ class Link
     @prices
     i = 0
     while i < @titles.length
-      puts "Property name: #{@titles[i]} \n Price: #{@prices[i]}"
+      puts "Property name: #{@titles[i]} \n Price: #{@prices[i]}\n\n"
       i += 1
     end
   end
