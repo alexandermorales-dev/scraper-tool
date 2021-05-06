@@ -30,8 +30,7 @@ puts html.arr
 
 =begin
 
-Test cases 
-
+Test case
 
 URL = https://www.encuentra24.com/panama-es/searchresult/bienes-raices-venta-de-propiedades?regionslug=prov-panama&q=f_price.-false|number.50
 
