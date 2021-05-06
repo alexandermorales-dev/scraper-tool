@@ -28,3 +28,17 @@ html.prices(prices.to_s)
 html.all
 puts html.arr
 
+=begin
+
+Test cases 
+
+
+URL = https://www.encuentra24.com/panama-es/searchresult/bienes-raices-venta-de-propiedades?regionslug=prov-panama&q=f_price.-false|number.50
+
+Container Class = article
+
+Title Class = ann-box-title
+
+Prices Class = ann-price-2nd
+
+=end
