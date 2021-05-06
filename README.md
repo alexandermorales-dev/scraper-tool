@@ -2,7 +2,7 @@
 
 # Scraper Tool - For Real State website (Capstone Project)
 
-> This tool allows the user to find a target in a given website. The tool was created with the concept of Leads Generation in mind, therefore, it should be able to provide the desired information to the user. In this case, the tool will search for Property Names, Price, Location, and Contact Info by area. 
+> This tool allows the user to find a target in a given website. The tool was created with the concept of Leads Generation in mind, but it can be used for different purposes, for example, getting a list of prices from a website, getting email contacts, relevant positions from a company website, etc. In this case, after giving the proper URL to the tool, it will search for Property Names, Price, and revert with Average price for the given location long witha list of each property and price. 
 
 ![screenshot](./app_screenshot.png)
 
@@ -20,8 +20,9 @@ In order to achieve this, Nokogiri gem needs to be used so we can actually get t
 **To get a local copy up and running follow these simple example steps.**
 
 - Clone this repository to a local folder
-- In this case the main file `scraper.rb` is in the root folder, so there's no need to `cd` into any other folder.
-- In your text editor's terminal run the command `ruby scraper.rb`
+- In the terminal, change to `bin` folder by typing `cd bin` into any other folder.
+- Run the command `ruby scraper.rb`
+- Follow the instructions and fill the information as per guidelines in console
 
 ### Prerequisites
 
@@ -40,11 +41,13 @@ It's important hat you have the proper environment set up in order to be able to
 
 ### Usage
 
-This tool has some preset values for the queries it performs, however, if you want to give it a try with a different website or just a different query, please see below the key values to change:
+This tool has some preset values for the queries it performs, however, if you want to give it a try with a different website or just a different query, please see note the following:
 
-- In the variable `html` you should change the url for the page that you want to scrape.
-- The value of the `article` variable should be replaced with the element containing the information of interest.
-- In the variables `title` and `prices` you have to change the value of the `.css()` property to the actual css selector containing the information needed.
+- In order to get information from a website this app needs the URL from where you want the info from.
+- It also needs the name of the Class containing the information
+- And also needs the class of the actual element that you want to retrieve with this tool
+- When using this app you should already have at hand the value of what's mentioned above
+- For your guidance, you can use the commented values at the bottom of the `scraper.rb`
 
 ## Authors
 
