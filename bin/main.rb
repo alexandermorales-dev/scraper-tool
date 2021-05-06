@@ -1,6 +1,9 @@
 require '../lib/methods'
 require 'nokogiri'
 require 'open-uri'
+require 'csv'
+
+data_array = []
 
 system 'cls'
 system 'clear'
@@ -27,6 +30,8 @@ html.prices(prices.to_s)
 
 html.all
 puts html.arr
+
+
 
 =begin
 
