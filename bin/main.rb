@@ -31,8 +31,6 @@ html.prices(prices.to_s)
 html.all
 puts html.arr
 
-
-
 =begin
 
 Test case
