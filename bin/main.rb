@@ -3,13 +3,10 @@ require 'nokogiri'
 require 'open-uri'
 require 'csv'
 
-data_array = []
-
 system 'cls'
 system 'clear'
 puts 'Insert the URL you want to scrape: '
 url = gets.chomp
-sleep(1)
 system 'cls'
 system 'clear'
 puts 'Insert the name of the container class holding the elements you are interested in: '
@@ -31,16 +28,14 @@ html.prices(prices.to_s)
 html.all
 puts html.arr
 
-=begin
-
-Test case
-
-URL = https://www.encuentra24.com/panama-es/searchresult/bienes-raices-venta-de-propiedades?regionslug=prov-panama&q=f_price.-false|number.50
-
-Container Class = article
-
-Title Class = ann-box-title
-
-Prices Class = ann-price-2nd
-
-=end
+#
+# Test case
+#
+# URL = https://www.encuentra24.com/panama-es/searchresult/bienes-raices-venta-de-propiedades?regionslug=prov-panama&q=f_price.-false|number.50
+#
+# Container Class = article
+#
+# Title Class = ann-box-title
+#
+# Prices Class = ann-price-2nd
+#
