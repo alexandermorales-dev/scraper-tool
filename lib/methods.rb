@@ -1,32 +1,26 @@
 class Link
-  attr_reader :addr, :listings, :titles, :prices, :average, :arr
+  attr_reader :addr, :list, :titles, :prices, :average, :arr
+
   def initialize(url)
     require 'nokogiri'
     require 'open-uri'
     require 'csv'
-    @addr = Nokogiri::HTML(URI.open("#{url}"))
+    @addr = Nokogiri::HTML(URI.open(url.to_s))
   end
 
   def listings(attr)
-    @addr
-    @listings = @addr.css("#{attr}")
+    @list = @addr.css(attr.to_s)
   end
 
   def titles(title_class)
-    @listings
-    @titles = @listings.map { |x| x.css(".#{title_class}").text}
+    @titles = @list.map { |x| x.css(".#{title_class}").text }
   end
 
   def prices(prices_class)
-    @listings
-    @prices = @listings.map { |x| x.css(".#{prices_class}").text}
+    @prices = @list.map { |x| x.css(".#{prices_class}").text }
   end
 
-
   def all
-    @listings
-    @titles
-    @prices
     i = 0
     @arr = []
     while i < @titles.length
