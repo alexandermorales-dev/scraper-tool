@@ -1,4 +1,4 @@
-require '../lib/methods'
+require_relative '../lib/methods'
 require 'nokogiri'
 require 'open-uri'
 
