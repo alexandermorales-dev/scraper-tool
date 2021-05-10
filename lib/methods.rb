@@ -4,7 +4,6 @@ class Link
   def initialize(url)
     require 'nokogiri'
     require 'open-uri'
-    require 'csv'
     @addr = Nokogiri::HTML(URI.open(url.to_s))
   end
 
