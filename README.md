@@ -22,7 +22,7 @@ In order to achieve this, Nokogiri gem needs to be used so we can actually get t
 - Clone this repository to a local folder
 - Run `bundle install` in order to install the gems needed
 - In the terminal, change to `bin` folder by typing `cd bin`
-- From `/bin`, run the command `ruby scraper.rb`
+- From `/bin`, run the command `ruby main.rb`
 
 ### Prerequisites
 
