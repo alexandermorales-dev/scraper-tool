@@ -23,3 +23,5 @@ test_2 = Link.new(url2, listings_class, title_class, price_class)
 listings = test_2.listings
 puts test_2.titles
 puts test_2.prices
+
+puts test_2.all
