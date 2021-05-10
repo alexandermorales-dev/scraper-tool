@@ -48,6 +48,12 @@ This tool has some preset values for the queries it performs, however, if you wa
 - It also needs the class of the actual element that you want to retrieve with this tool, in our example, would be the class for the element containing the Title of the properties, and also the class for the element containing the prices. Which are, `_bzh5lkq` and `_olc9rf0` respectively
 - For you to be able to find the classes mentioned above, you will need to `inspect` the website you want to scrape. On most browsers you can just right click on the element you are interested in and select `inspect`.
 
+Note:
+
+- There 2 test cases:
+  - Test case 1: It returns the data by manually implementing some logic
+  - Test case 2: It returns the data by using instance methods
+
 ## Authors
 
 👤 **Alexander Morales**
