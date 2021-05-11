@@ -9,7 +9,9 @@ price_class = '_olc9rf0'
 # test case 1
 url1 = 'https://www.airbnb.com/s/Bajo-Boquete/homes?place_id=ChIJWYPOC9_spY8RdI653z0wmMA&refinement_paths%5B%5D=%2Fhomes&search_type=section_navigation'
 
-doc1 = Nokogiri::HTML(URI.open(url1))
+private
+
+doc1 = Nokogiri::HTML(URI.parse(url1).open)
 listings = doc1.css(".#{listings_class}")
 p(listings.map { |x| x.css(".#{title_class}").text })
 p(listings.map { |x| x.css(".#{price_class}").text })
