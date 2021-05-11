@@ -62,9 +62,9 @@ Note:
 
 👤 **Alexander Morales**
 
-- GitHub: @alexandermorales-dev
-- Twitter: @Alexand81099721
-- LinkedIn: AlexanderMorales
+- GitHub: [@alexandermorales-dev](https://github.com/alexandermorales-dev/)
+- Twitter: [@Alexand81099721](https://twitter.com/Alexand81099721)
+- LinkedIn: [AlexanderMorales](https://www.linkedin.com/in/alexander-morales-b8539898/)
 - Email: alexandermorales.n1@gmail.com
 
 ## 🤝 Contributing
