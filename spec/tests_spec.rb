@@ -1,39 +1,38 @@
-require './lib/methods'
+  require_relative '../lib/methods'
 
-describe Link do
-  describe '#listings' do
-    html = Link.new('https://www.encuentra24.com/panama-es/searchresult/bienes-raices-venta-de-propiedades?regionslug=prov-panama&q=f_price.-false|number.50')
-    it 'returns a nodeset containing set of listings' do
-      expect(html.listings('.article')).to be_a(Nokogiri::XML::NodeSet)
-    end
-  end
+  describe Link do
+    describe "#titles" do
+      listings_class = '_8s3ctt'
+      title_class = '_bzh5lkq'
+      price_class = '_olc9rf0'
+      url = 'https://www.airbnb.com/s/Bajo-Boquete/homes?place_id=ChIJWYPOC9_spY8RdI653z0wmMA&refinement_paths%5B%5D=%2Fhomes&search_type=section_navigation'
+      new_test = Link.new(url, listings_class, title_class, price_class)
+      it "returns an array of titles" do
+        expect(new_test.titles(title_class)).to be_a(Array)
+      end
 
-  describe '#titles' do
-    html = Link.new('https://www.encuentra24.com/panama-es/searchresult/bienes-raices-venta-de-propiedades?regionslug=prov-panama&q=f_price.-false|number.50')
-    html.listings('.article')
-    html.titles('.ann-box-title')
-    it 'returns a nodeset containing set of listing titles' do
-      expect(html.listings('.article')).to be_a(Nokogiri::XML::NodeSet)
+      it "returns not empty values if finds content with the css selector passed in" do
+        expect(new_test.titles(title_class)).not_to be_empty
+      end
     end
-  end
 
-  describe '#prices' do
-    html = Link.new('https://www.encuentra24.com/panama-es/searchresult/bienes-raices-venta-de-propiedades?regionslug=prov-panama&q=f_price.-false|number.50')
-    html.listings('.article')
-    html.prices('.ann-price-2nd')
-    it 'returns a nodeset containing set of listing prices' do
-      expect(html.listings('.article')).to be_a(Nokogiri::XML::NodeSet)
-    end
-  end
+    describe "#prices" do
+      listings_class = '_8s3ctt'
+      title_class = '_bzh5lkq'
+      price_class = '_olc9rf0'
+      url = 'https://www.airbnb.com/s/Bajo-Boquete/homes?place_id=ChIJWYPOC9_spY8RdI653z0wmMA&refinement_paths%5B%5D=%2Fhomes&search_type=section_navigation'
+      new_test = Link.new(url, listings_class, title_class, price_class)
+      it "returns an array of prices" do
+        expect(new_test.price(price_class)).to be_a(Array)
+      end
 
-  describe '#all' do
-    html = Link.new('https://www.encuentra24.com/panama-es/searchresult/bienes-raices-venta-de-propiedades?regionslug=prov-panama&q=f_price.-false|number.50')
-    html.listings('.article')
-    html.titles('.ann-box-title')
-    html.prices('.ann-price-2nd')
-    html.all
-    it 'returns an array containing titles and prices in a string' do
-      expect(html.arr).to be_a(Array)
+      it "returns not empty values if finds content with the css selector passed in" do
+        expect(new_test.price(price_class)).not_to be_empty
+      end
+
+      it "returns true when it finds content with the css selector passed in" do
+        expect(new_test.price(price_class)).to be_truthy
+      end
     end
+
   end
-end
