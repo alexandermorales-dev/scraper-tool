@@ -18,5 +18,5 @@ p(listings.map { |x| x.css(".#{price_class}").text })
 url2 = 'https://www.airbnb.com/s/Santa-Clara/homes?place_id=ChIJSbtePuWfrI8RWyPxIedxXic&refinement_paths%5B%5D=%2Fhomes&search_type=section_navigation'
 
 test2 = Link.new(url2, listings_class, title_class, price_class)
-puts "These are the property titles: #{test2.titles}"
-puts "These are the property prices: #{test2.prices}"
+puts "\n\nThese are the property titles:\n #{test2.titles(title_class)}\n\n"
+puts "These are the property prices: \n#{test2.price(price_class)}\n\n"
