@@ -1,10 +1,10 @@
 class Link
   attr_reader :addr, :listings
 
-  def initialize(url, attr, title_class, price_class)
+  def initialize(url, attr, _title_class, _price_class)
     require 'nokogiri'
     require 'open-uri'
-    @addr = Nokogiri::HTML(URI.open(url.to_s))
+    @addr = Nokogiri::HTML(URI.parse(url.to_s).open)
     @listings = @addr.css(".#{attr}".to_s)
   end
 
