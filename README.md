@@ -10,6 +10,10 @@ In order to achieve this, Nokogiri gem needs to be used so we can actually get t
 
 ## Built With
 
+[Live Version](https://replit.com/@AlexanderMoral5/scraper#main.rb)
+
+## Built With
+
 - Ruby
 - Nokogiri gem
 - RSpec for testing
